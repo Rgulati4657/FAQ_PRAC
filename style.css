@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans",sans-serif;
+}
+:root {
+    --ff-sans: 'Work Sans', sans-serif;
+    --fw-bold: 700;
+    --fw-semibold: 600;
+    --fw-M-regular: 400;
+    --fs-400: 1rem;
+    --fs-500: 1.3rem;
+    --fs-700: 1.825rem;
+    --fs-800: 2.8rem;
+    --fs-900: 3.1rem;
+    --pr-clr-lightpink: hsl(275, 100%, 97%);
+    --pr-clr-white:hsl(0, 0%, 100%);
+    --pr-clr-grayishpurple: hsl(292, 16%, 49%);
+    --pr-clr-darkpurple: hsl(292, 42%, 14%);
+    --clr-active: hsl(275, 60%, 55%);
+}
+
+body{
+    background-color: var(--pr-clr-lightpink);
+    color: var(--pr-clr-darkpurple);
+}
+.upperbg{
+    width: 100vw;
+    height: 40vh;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bigblock{
+    background-color: var(--pr-clr-white);
+    border-radius: 1.4rem;
+    max-width: 750px;
+    margin: -80px auto;
+    margin-bottom: 20px; 
+    line-height: 1.5rem;
+    padding: 20px;
+    text-align: left;
+    position: relative; 
+    /* z-index: 1;  */
+    box-shadow: rgba(8, 8, 8, 0.15) 0px 15px 25px;
+}
+.faq{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.faq h1{
+    font-weight:700;
+    font-size: 3rem;
+}
+.occordian{
+    width: 100%;
+    height: auto;
+    line-height: 1.3rem;
+    margin-block: 2rem;
+    /* overflow: hidden; */
+}
+.occordian h4:active,.occordian h4:hover{
+    color: var(--clr-active);
+cursor: pointer;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+color: var(--color-Dark-purple);
+font-size: 1.2rem;
+}
+.question button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.border-bb{
+    border-width: 100%;
+    border-bottom: 1px solid hsla(0, 3%, 32%, 0.421);
+}
+
+.answer{
+    display: none;
+    color: var(--color-Grayish-purple);
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+.show{
+    display: block;
+}
+@media screen and (max-width: 750px) {
+    h1 {
+      font-size: 2rem;
+    }
+    .upperbg{
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+
+    }
+    .bigblock{
+        margin-inline: 1rem;
+    }
+    .question {
+      font-size: 1rem;
+    }
+    .answer {
+      font-size: 1rem;
+    }
+}
